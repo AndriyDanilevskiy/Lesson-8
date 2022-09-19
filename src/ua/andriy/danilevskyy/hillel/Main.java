@@ -1,7 +1,5 @@
 package ua.andriy.danilevskyy.hillel;
 
-import ua.andriy.danilevskyy.hillel.exceptions.ArrayDataException;
-import ua.andriy.danilevskyy.hillel.exceptions.ArraySizeException;
 import ua.andriy.danilevskyy.hillel.service.ArrayValueCalculator;
 
 public class Main {
