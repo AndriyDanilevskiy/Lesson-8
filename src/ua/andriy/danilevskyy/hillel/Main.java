@@ -16,7 +16,7 @@ public class Main {
         int sum = 0;
         try {
             sum = calculator.doCalc(data);
-        } catch (RuntimeException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Ooops.. " + e.getMessage());
         }
 
