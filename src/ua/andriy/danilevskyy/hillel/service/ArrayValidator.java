@@ -17,11 +17,16 @@ public class ArrayValidator {
         }
     }
 
-    static void validateArrayItem(String[][] arr, int itemParamOne, int itemParamTwo) {
+    static void validateArrayItem(String[][] arr, int i, int j) {
+        if(isNull(arr[i][j])){
+            throw new IllegalStateException("Element with coordinates '" + i + "','" + j
+                    + "' is null.");
+        }
+
         try{
-            Integer.parseInt(arr[itemParamOne][itemParamTwo]);
+            Integer.parseInt(arr[i][j]);
         } catch (NumberFormatException e) {
-            String message = e.getMessage() + ": Element with coordinates '" + itemParamOne + "','" + itemParamTwo
+            String message = e.getMessage() + ": Element with coordinates '" + i + "','" + j
                     + "' has wrong format.";
             throw new ArrayDataException(message);
         }
